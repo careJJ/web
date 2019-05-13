@@ -310,7 +310,7 @@ func(this*UserController)HandleLogin(){
 	}else{
 		this.Ctx.SetCookie("LoginName",user.Name,-1)
 	}
-	//this.SetSession("name",user.Name)
+	this.SetSession("name",user.Name)
 	this.Redirect("/index",302)
 }
 

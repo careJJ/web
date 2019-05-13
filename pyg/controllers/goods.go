@@ -8,5 +8,10 @@ type GoodsController struct {
 
 
 func (this*GoodsController)ShowIndex() {
+	name:=this.GetSession("name")
+	if name!=nil{
+		this.Data["name"]=name.(string)
+	}
+	
 	this.TplName="/index"
 }
